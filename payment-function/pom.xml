@@ -10,10 +10,10 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.ntuc.income</groupId>
-  <artifactId>demo</artifactId>
+  <artifactId>payment-function</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>payment-function</name>
-  <description>Demo project for Spring Boot</description>
+  <description>payment-function</description>
 
   <properties>
     <java.version>1.8</java.version>
