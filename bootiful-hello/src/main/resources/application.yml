@@ -1,0 +1,17 @@
+server.port: 8082
+spring.application.name: "bootiful-service"
+server.servlet.context-path: /api
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+

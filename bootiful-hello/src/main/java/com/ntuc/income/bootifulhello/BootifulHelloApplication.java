@@ -1,5 +1,10 @@
 package com.ntuc.income.bootifulhello;
 
+import com.ntuc.income.bootifulhello.entity.User;
+import com.ntuc.income.bootifulhello.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController("")
-public class BootifulHelloApplication {
+public class BootifulHelloApplication implements ApplicationRunner {
+
+	@Autowired UserRepository userRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(BootifulHelloApplication.class, args);
@@ -25,4 +32,13 @@ public class BootifulHelloApplication {
 	public String greetPost(@RequestBody String name){
 		return "Hello  "+ name +"! from post ";
 	}
+
+	@Override public void run(ApplicationArguments args) throws Exception {
+		userRepository.save(new User("John", 22));
+		userRepository.save(new User("Doe", 43));
+		userRepository.save(new User("Jill", 32));
+
+	}
+
+
 }
