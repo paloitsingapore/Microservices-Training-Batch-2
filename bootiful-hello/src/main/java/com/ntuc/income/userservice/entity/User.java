@@ -1,4 +1,4 @@
-package com.ntuc.income.bootifulhello.entity;
+package com.ntuc.income.userservice.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name="user")
+@Table(name = "user")
 @Entity
 public class User {
 
@@ -18,7 +18,8 @@ public class User {
 
   private int age;
 
-  User(){}
+  User() {
+  }
 
   public User(String name, int age) {
     this.name = name;

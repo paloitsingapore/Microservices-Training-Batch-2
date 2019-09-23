@@ -1,12 +1,13 @@
-package com.ntuc.income.bootifulhello;
+package com.ntuc.income.userservice;
 
-import com.ntuc.income.bootifulhello.entity.User;
-import com.ntuc.income.bootifulhello.repository.UserRepository;
+import com.ntuc.income.userservice.entity.User;
+import com.ntuc.income.userservice.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,7 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@RestController("")
+@RestController
+@EnableDiscoveryClient
 public class BootifulHelloApplication implements ApplicationRunner {
 
 	@Autowired UserRepository userRepository;

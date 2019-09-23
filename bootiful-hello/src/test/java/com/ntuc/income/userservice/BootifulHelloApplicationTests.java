@@ -1,4 +1,4 @@
-package com.ntuc.income.bootifulhello;
+package com.ntuc.income.userservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
