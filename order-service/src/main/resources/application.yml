@@ -1,5 +1,7 @@
 server.port: 8083
 
+info: Order service
+
 spring:
   application:
     name: order-service
@@ -14,3 +16,5 @@ spring:
   h2:
     console:
       enabled: true
+
+logging.level.org.springframework.cloud.openfeign: trace

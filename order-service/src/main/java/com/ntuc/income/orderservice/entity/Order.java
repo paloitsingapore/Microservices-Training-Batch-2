@@ -12,9 +12,8 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@AllArgsConstructor
 @NoArgsConstructor
-@Table(name= "order")
+@Table(name= "orders")
 public class Order {
 
   @Id
@@ -23,4 +22,10 @@ public class Order {
 
   private Date orderDate;
 
+  private Long userId;
+
+  public Order(Date orderDate, Long userId) {
+    this.orderDate = orderDate;
+    this.userId = userId;
+  }
 }
