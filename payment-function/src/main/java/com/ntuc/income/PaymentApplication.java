@@ -21,7 +21,7 @@ public class PaymentApplication {
   }
 
   @Bean
-  public Supplier<Mono<String>> greetSupplier() {
-    return () -> Mono.just("hello");
+  public Supplier<Flux<String>> greetSupplier() {
+    return () -> Flux.just("hello");
   }
 }

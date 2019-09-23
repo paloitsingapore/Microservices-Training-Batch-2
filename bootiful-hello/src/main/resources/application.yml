@@ -1,4 +1,4 @@
-server.port: 8084
+server.port: 8090
 spring.application.name: "user-service"
 server.servlet.context-path: /api
 info: User  service
@@ -22,3 +22,8 @@ logging:
       springframework:
         cloud:
           netflix: trace
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
