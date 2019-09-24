@@ -24,7 +24,7 @@ spring:
             security.protocol: SASL_SSL
             sasl:
               mechanism: SCRAM-SHA-256
-              jaas.config: org.apache.kafka.common.security.scram.ScramLoginModule required username="sqcfxdzi" password="***REMOVED***";
+              jaas.config: org.apache.kafka.common.security.scram.ScramLoginModule required username="sqcfxdzi" password="${PASSWORD}";
       bindings:
         input:
           destination: sqcfxdzi-order
