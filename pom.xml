@@ -9,7 +9,9 @@
         <name>Microservices-Training-Batch-2</name>
         <description>Microservices-Training-Batch-2</description>
 		<packaging>pom</packaging>
-
+	<properties>
+		<spring-cloud.version>Greenwich.SR3</spring-cloud.version>
+	</properties>
 	<modules>
 		<module>discovery-service</module>
 		<module>order-service</module>
@@ -17,6 +19,33 @@
 		<module>bootiful-hello</module>
 		<module>edge-service</module>
 		<module>order-history</module>
+		<module>configuration-server</module>
 	</modules>
-
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-registry-prometheus</artifactId>
+			<version>1.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+			<version>2.1.8.RELEASE</version>
+		</dependency>
+	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>
