@@ -58,7 +58,7 @@ public class BootifulHelloApplication implements ApplicationRunner {
 			@Header(KafkaHeaders.RECEIVED_TOPIC) String topic,
 			@Header(KafkaHeaders.RECEIVED_PARTITION_ID) Integer partition,
 			@Header(KafkaHeaders.OFFSET) Long offset){
-		log.info(event);
+		log.info("Event: {}    topic: {}    partition: {}    offset: {}", event, topic, partition, offset);
 	}
 
 

@@ -16,6 +16,7 @@
 		<module>payment-function</module>
 		<module>bootiful-hello</module>
 		<module>edge-service</module>
+		<module>order-history</module>
 	</modules>
 
 </project>
