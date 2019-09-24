@@ -22,7 +22,7 @@ public class OrderController {
     this.userService = userService;
   }
 
-  @GetMapping("/order")
+  @GetMapping("/orders")
   public ResponseEntity placeOrder(@RequestParam Long userId){
     try {
       return ResponseEntity.ok(
@@ -34,7 +34,7 @@ public class OrderController {
     }
   }
 
-  @GetMapping("/order/users")
+  @GetMapping("/orders/users")
   public String getUsers(){
     return
         userService.getUsers() ;

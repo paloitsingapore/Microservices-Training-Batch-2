@@ -23,7 +23,7 @@ public class UserController {
     return userRepository.findAll();
   }
 
-  @GetMapping(path = "/user/{id}")
+  @GetMapping(path = "/users/{id}")
   public ResponseEntity<User> getUserById(@PathVariable Long id){
     Optional<User> user = userRepository.findById(id);
     if (user.isPresent()) {
@@ -33,7 +33,7 @@ public class UserController {
     }
   }
 
-  @PostMapping("/user")
+  @PostMapping("/users")
   public ResponseEntity saveOrCreateUser(@RequestBody @Valid User user){
     User savedUser = userRepository.save(user);
     URI uri = URI.create("http://localhost:8082/api/user/" + Long.toString(savedUser.getId()));
